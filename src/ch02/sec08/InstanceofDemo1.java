@@ -20,3 +20,7 @@ public class InstanceofDemo1 {
         }
     }
 }
+/*Vehicle v = new Car(); -> 참조변수 타입 Vehicle 실제 객체 Car
+필드로 하면 참조 기준으로 찾는다.
+
+ */
