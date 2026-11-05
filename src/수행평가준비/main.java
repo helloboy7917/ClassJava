@@ -1,8 +1,11 @@
 package 수행평가준비;
 
+import javax.swing.*;
+import java.util.Scanner;
+
 public class main {
     static void main(String[] args) {
-        menu m1 = new menu("아메리카노",3500);
+        /*menu m1 = new menu("아메리카노",3500);
         menu m2 = new menu("카페라떼",4000);
         menu m3 = new menu("블루베리 스무디",4500);
 
@@ -48,7 +51,29 @@ public class main {
 
         System.out.println("\n====간편결제====");
         SimplePayment simple = new SimplePayment(1000);
-        simple.pay(cart.calculateFinalPrice());
+        simple.pay(cart.calculateFinalPrice());*/
+
+
+        Payment payment1 = new Payment("카드 결제");
+        Payment payment2 = new Payment("간편 결제");
+        Scanner in  = new Scanner(System.in);
+        System.out.println("1번: 카드결제");
+        System.out.println("2번: 간편 결제");
+        int p = in.nextInt();
+
+        if(p==1){
+            CardPayment cardPayment = new CardPayment("카드입니다.");
+            cardPayment.pay(3000);
+        }else if (p==2) {
+            SimplePayment simplePayment = new SimplePayment(3000);
+            simplePayment.pay(3000);
+
+        }else{
+            System.out.println("잘못된 결제수단 입니다.");
+        }
+
+
+
 
     }
 }
