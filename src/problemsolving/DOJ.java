@@ -30,7 +30,7 @@ public class DOJ {
             }
 
         }
-        System.out.println(last);
+        System.out.println(last);   
         System.out.println(count);
     }
 }
